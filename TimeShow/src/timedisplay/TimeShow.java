@@ -1,17 +1,21 @@
 package timedisplay;
 
-import java.util.*;
-import java.text.*;
+import java.util.Date;
 
-public class TimeShow {
+	public class TimeShow{
+	
+		public static void main(String[] args)
+		{
+    
+			try {
+				while (true) {
+					System.out.println(new Date());
+					Thread.sleep(10 * 1000);
+				}
+			} catch (InterruptedException e) {
+				e.printStackTrace();
+			} //end catch
 
-	public static void main(String[] args) {
-
-		Date tshow = new Date();
-		SimpleDateFormat timer = new SimpleDateFormat("hh:mm:ss a zzz");
-		
-		System.out.println(timer.format(tshow));
-		
-	} //end main
-
-} //end class
+		} //end main
+	
+	} //end class
